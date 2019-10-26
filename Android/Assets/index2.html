@@ -1,0 +1,20 @@
+﻿<html>
+<body>
+Hello World
+<div id="test"></div>
+
+<script>
+    document.getElementById("test").innerHTML = "Loading js";
+
+    setTimeout(function() {
+        var script = document.createElement('script');
+        script.onload = function () {
+            //do stuff with the script
+        };
+        script.src = "index2.js";
+
+        document.head.appendChild(script);
+    }, 5000);
+</script>
+</body>
+</html>
